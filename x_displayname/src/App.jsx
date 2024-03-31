@@ -45,7 +45,7 @@ function App() {
           onChange={handlelastChange}
         />
       </div>
-      <button onClick={handleDisplayFullName}>Submit</button>
+      <button type="submit" onClick={handleDisplayFullName}>Submit</button>
       {error && <p style={{ color: 'red' }}>{error}</p>}
       {fullName && (
         <div>
