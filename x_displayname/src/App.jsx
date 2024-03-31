@@ -19,6 +19,7 @@ function App() {
     event.preventDefault();
     if (first.trim() === '' || last.trim() === '') {
       setError('Please fill in both first name and last name.');
+      setFullName(''); // Clear full name if there's an error
     } else {
       setFullName(`${first} ${last}`);
       setError('');
