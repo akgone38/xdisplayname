@@ -15,7 +15,8 @@ function App() {
     setlast(event.target.value);
   };
 
-  const handleDisplayFullName = () => {
+  const handleDisplayFullName = (event) => {
+    event.preventDefault();
     if (first.trim() === '' || last.trim() === '') {
       setError('Please fill in both first name and last name.');
     } else {
