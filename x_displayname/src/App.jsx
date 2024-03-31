@@ -27,29 +27,31 @@ function App() {
   return (
     <div>
       <h1>Full Name Display</h1>
-      <div>
-        <label htmlFor="first">First Name:</label>
-        <input
-          type="text"
-          id="first"
-          value={first}
-          onChange={handlefirstChange}
-        />
-      </div>
-      <div>
-        <label htmlFor="last">Last Name:</label>
-        <input
-          type="text"
-          id="last"
-          value={last}
-          onChange={handlelastChange}
-        />
-      </div>
-      <button type="submit" onClick={handleDisplayFullName}>Submit</button>
+      <form>
+        <div>
+          <label htmlFor="first">First Name:</label>
+          <input
+            type="text"
+            id="first"
+            value={first}
+            onChange={handlefirstChange}
+          />
+        </div>
+        <div>
+          <label htmlFor="last">Last Name:</label>
+          <input
+            type="text"
+            id="last"
+            value={last}
+            onChange={handlelastChange}
+          />
+        </div>
+        <button type="submit" onClick={handleDisplayFullName}>Submit</button>
+      </form>
       {error && <p style={{ color: 'red' }}>{error}</p>}
       {fullName && (
         <div>
-          <h2>Full Name:{fullName}</h2>
+          <h2>Full Name: {fullName}</h2>
         </div>
       )}
     </div>
