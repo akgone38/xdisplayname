@@ -37,6 +37,7 @@ function App() {
             id="first"
             value={first}
             onChange={handlefirstChange}
+            title={first.trim() === '' ? "Please fill out this field" : ""}
           />
         </div>
         <div>
@@ -46,11 +47,11 @@ function App() {
             id="last"
             value={last}
             onChange={handlelastChange}
+            title={last.trim() === '' ? "Please fill out this field" : ""}
           />
         </div>
         <button type="submit" onClick={handleDisplayFullName}>Submit</button>
       </form>
-      {error && <p style={{ color: 'red' }}>{error}</p>}
       {fullName && (
         <div>
           <h2>Full Name: {fullName}</h2>
