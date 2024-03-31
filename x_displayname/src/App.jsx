@@ -2,24 +2,24 @@ import { useState } from 'react'
 import './App.css'
 
 function App() {
-  const [firstName, setFirstName] = useState('');
-  const [lastName, setLastName] = useState('');
+  const [first, setfirst] = useState('');
+  const [last, setlast] = useState('');
   const [fullName, setFullName] = useState('');
   const [error, setError] = useState('');
 
-  const handleFirstNameChange = (event) => {
-    setFirstName(event.target.value);
+  const handlefirstChange = (event) => {
+    setfirst(event.target.value);
   };
 
-  const handleLastNameChange = (event) => {
-    setLastName(event.target.value);
+  const handlelastChange = (event) => {
+    setlast(event.target.value);
   };
 
   const handleDisplayFullName = () => {
-    if (firstName.trim() === '' || lastName.trim() === '') {
+    if (first.trim() === '' || last.trim() === '') {
       setError('Please fill in both first name and last name.');
     } else {
-      setFullName(`${firstName} ${lastName}`);
+      setFullName(`${first} ${last}`);
       setError('');
     }
   };
@@ -28,21 +28,21 @@ function App() {
     <div>
       <h1>Full Name Display</h1>
       <div>
-        <label htmlFor="firstName">First Name:</label>
+        <label htmlFor="first">First Name:</label>
         <input
           type="text"
-          id="firstName"
-          value={firstName}
-          onChange={handleFirstNameChange}
+          id="first"
+          value={first}
+          onChange={handlefirstChange}
         />
       </div>
       <div>
-        <label htmlFor="lastName">Last Name:</label>
+        <label htmlFor="last">Last Name:</label>
         <input
           type="text"
-          id="lastName"
-          value={lastName}
-          onChange={handleLastNameChange}
+          id="last"
+          value={last}
+          onChange={handlelastChange}
         />
       </div>
       <button onClick={handleDisplayFullName}>Submit</button>
